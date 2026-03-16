@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skill | Cyber Roadmap Hub</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body data-page="skill">
+  <div class="app-shell">
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">Cyber Roadmap Hub</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="progress.html">Progress</a>
+          <a href="chat.html">Chat</a>
+          <a href="about.html">About</a>
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="skill-layout">
+        <article class="skill-main card-panel">
+          <span class="eyebrow" id="skillCategory">Skill Module</span>
+          <h1 id="skillTitle">Skill Details</h1>
+          <p id="skillDescription">Choose a skill from the roadmap to view its learning resources.</p>
+
+          <div class="skill-meta">
+            <div class="meta-chip" id="skillStatusChip">Status: Locked</div>
+            <div class="meta-chip" id="skillPrerequisiteChip">Prerequisites: None</div>
+          </div>
+
+          <div class="skill-actions">
+            <button class="primary-button" id="completeSkillButton" type="button">Mark as Completed</button>
+            <a class="secondary-button" href="roadmap.html">Back to Roadmap</a>
+          </div>
+
+          <p class="status-banner" id="skillMessage" aria-live="polite"></p>
+        </article>
+
+        <aside class="skill-sidebar card-panel">
+          <p class="panel-copy">Open the referenced videos, guides, and labs, then return here to mark the task as completed.</p>
+          <h2>Learning Resources</h2>
+          <div class="resource-list" id="resourceList"></div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
+  <script src="../scripts/script.js"></script>
+
+  <button id="backToTop" class="back-to-top" style="display:none;" aria-label="Back to top">↑</button>
+</body>
+</html>

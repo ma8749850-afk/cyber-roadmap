@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress | Cyber Roadmap Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="progress">
+  <div class="app-shell">
+    <header class="site-header">
+      <nav class="navbar">
+        <a class="brand" href="index.html">Cyber Roadmap Hub</a>
+        <div class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="roadmap.html">Roadmap</a>
+          <a href="progress.html">Progress</a>
+          <a href="chat.html">Chat</a>
+          <a href="about.html">About</a>
+        </div>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">☀️</button>
+      </nav>
+    </header>
+
+    <main class="page">
+      <section class="section-heading">
+        <div>
+          <span class="eyebrow">Your Dashboard</span>
+          <h1>Learning Progress</h1>
+          <p>See how far you have moved through the roadmap and what is already complete.</p>
+        </div>
+      </section>
+
+      <section class="progress-summary-grid">
+        <article class="card-panel summary-card">
+          <span class="metric-label">Completion Rate</span>
+          <strong id="progressTextCard">0%</strong>
+          <p>Measured across all leaf tasks in the roadmap.</p>
+        </article>
+        <article class="card-panel summary-card">
+          <span class="metric-label">Momentum</span>
+          <strong id="progressCaptionMini">Starting</strong>
+          <p>Keep stacking small wins to unlock deeper branches.</p>
+        </article>
+      </section>
+
+      <section class="progress-layout">
+        <article class="card-panel">
+          <div class="progress-label-row">
+            <span>Overall Completion</span>
+            <strong id="progressText">0%</strong>
+          </div>
+          <div class="progress-track">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <p class="progress-caption" id="progressCaption">0 of 6 skills completed</p>
+        </article>
+
+        <article class="card-panel">
+          <h2>Completed Skills</h2>
+          <ul class="completed-list" id="completedSkillsList"></ul>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-messaging.js"></script>
+  <script src="script.js"></script>
+
+  <button id="backToTop" class="back-to-top" style="display:none;" aria-label="Back to top">↑</button>
+</body>
+</html>
